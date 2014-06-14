@@ -1,0 +1,36 @@
+[user]
+	name = nekobato
+	email = nekobato@nekobato.net
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = false
+[core]
+	editor = vim
+	pager = lv -c
+[color]
+	ui = auto
+[alias]
+	b = branch
+	c = checkout
+	st = status
+	sh = show
+	sb = show-branch
+	cm = commit
+	cmv = commit -v
+	cma = commit -a -v
+	co = checkout
+	cl = clone
+	dc = diff --cached
+	d = diff -C
+	ds = diff -C --stat
+	lg = log --graph --all --color --oneline
+	l = log
+[push]
+	default = simple
+[github]
+	user = nekobato
+	email = nekobato@nekobato.net
+	token = c436d86074ba8e479cf4402e1dacefdba336bee2
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
