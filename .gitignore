@@ -1,2 +1,4 @@
 .DS_*
-vim
+vim/bundle/*
+vim/bundle/.neobundle/
+!vim/bundle/keep
