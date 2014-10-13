@@ -105,6 +105,7 @@ set ttymouse=xterm2
 "
 set nowritebackup
 set nobackup
+set noswapfile
 
 
 "

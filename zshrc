@@ -81,6 +81,7 @@ alias ls="ls -v"
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 # Git aliase
 alias gitc="git commit -m"
+alias gitsl="bash ~/dotfiles/oneliner/gitstatus-list.sh"
 alias flac2mp3="bash /Users/nekobato/projects/home/flac2mp3.sh"
 
 
@@ -126,3 +127,9 @@ if [ ! -z "`which tmux`" ]; then
     fi
   fi
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+### docker
+export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375

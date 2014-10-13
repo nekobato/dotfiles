@@ -11,7 +11,7 @@ export EDITOR
 export TERM=xterm-256color
 
 # Common bin
-PATH=$HOME/bin:/usr/bin/:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
+PATH=$HOME/bin:/usr/bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
 
 # Zsh functions
 FPATH=$HOME/.zsh/functions/Completion:/usr/local/share/zsh/site-functions:$FPATH
