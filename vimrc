@@ -31,6 +31,7 @@ NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'scrooloose/nerdtree'
 " 起動時にオン
 autocmd vimenter * NERDTree
+autocmd VimEnter * wincmd p
 " 表示がNerdTreeのみだったら自動でclose
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " NerdTree Size
@@ -97,7 +98,7 @@ let g:neocomplcache_max_list = 20
 let g:neocomplcache_min_syntax_length = 3
 
 " Mouse
-set mouse=a
+set mouse-=a
 set ttymouse=xterm2
 
 
