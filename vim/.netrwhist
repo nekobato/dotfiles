@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/nekobato/projects/commit/u-note/AndroidApp/.git'
-let g:netrw_dirhist_2='/Users/nekobato/dotfiles/.git'
-let g:netrw_dirhist_3='/Users/nekobato/projects/commit/u-note/pagetest/iphone'
-let g:netrw_dirhist_4='/Users/nekobato/projects/commit/u-note/pagetest/pc'
-let g:netrw_dirhist_5='/Users/nekobato/projects/commit/u-note/sitelogcollector/.git'
-let g:netrw_dirhist_6='/Users/nekobato/projects/app/express-template/.git'

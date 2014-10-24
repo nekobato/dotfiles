@@ -33,7 +33,8 @@ NeoBundle 'scrooloose/nerdtree'
 autocmd vimenter * NERDTree
 " 表示がNerdTreeのみだったら自動でclose
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
+" NerdTree Size
+let g:NERDTreeWinSize=20
 
 "
 " Coloring
