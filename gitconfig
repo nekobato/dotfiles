@@ -25,6 +25,7 @@
 	ds = diff -C --stat
 	lg = log --graph --all --color --oneline
 	l = log
+  today = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --since=midnight --oneline --author=\"`git config --get user.name`\"'"
 [push]
 	default = simple
 [github]
