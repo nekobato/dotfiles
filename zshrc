@@ -80,9 +80,7 @@ setopt auto_resume
 alias ls="ls -v"
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 # Git aliase
-alias gitc="git commit -m"
-alias gitsl="bash ~/dotfiles/oneliner/gitstatus-list.sh"
-alias flac2mp3="bash /Users/nekobato/projects/home/flac2mp3.sh"
+alias gitsl="bash ~/dotfiles/commands/gitstatus-list.sh"
 
 
 #
