@@ -1,6 +1,6 @@
 [user]
 	name = nekobato
-	email = nekobato@nekobato.net
+	email = nekobato@gmail.com
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = false
