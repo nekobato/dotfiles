@@ -126,8 +126,9 @@ if [ ! -z "`which tmux`" ]; then
   fi
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 ### docker
 export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+
+PERL_MB_OPT="--install_base \"/Users/nekobato/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/nekobato/perl5"; export PERL_MM_OPT;

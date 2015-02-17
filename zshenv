@@ -11,7 +11,17 @@ export EDITOR
 export TERM=xterm-256color
 
 # Common bin
-PATH=$HOME/bin:/usr/bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
+export PATH="/bin:$PATH"
+export PATH="/sbin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/Cellar:$PATH"
+export PATH="$HOME/bin:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
 # Zsh functions
 FPATH=$HOME/.zsh/functions/Completion:/usr/local/share/zsh/site-functions:$FPATH
@@ -45,3 +55,7 @@ export GOPATH=/Users/nekobato/.gocode:$GOPATH
 
 export LANG=js_JP.UTF-8
 export SHELL=/bin/zsh
+PATH=~/.plenv/shims:$PATH
+
+# Android
+export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.0.2
