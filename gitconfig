@@ -32,7 +32,6 @@
 [github]
 	user = nekobato
 	email = nekobato@gmail.com
-	token = 5702468ebef7e985bd77dc4f7877de4585a25289
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
