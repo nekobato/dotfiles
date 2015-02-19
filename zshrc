@@ -10,8 +10,7 @@ antigen-bundles <<EOBUNDLES
   zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
-antigen-theme avit
-ZSH_THEME=avit
+antigen-theme fino
 
 antigen apply
 
@@ -26,8 +25,6 @@ setopt hist_reduce_blanks # formatted history
 #
 # Language support
 #
-export LANG=ja_JP.UTF-8 # language setting
-export KCODE=u
 setopt print_eight_bit # display JP lang
 setopt no_flow_control # unenable flow control
 

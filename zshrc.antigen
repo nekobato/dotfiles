@@ -1,5 +1,0 @@
-source .antigen.zsh
-
-antigen-bundle git
-antigen-bundle autojunp
-antigen-bundle heroku
