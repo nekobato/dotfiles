@@ -38,13 +38,6 @@ if type brew >/dev/null 2>&1; then
 fi
 
 
-LISTMAX=0
-CLICOLOR=1
-LSCOLORS=exfxbxdxcxhegedabagahcdx
-LS_COLORS='di=34:ln=35:so=32:pi=33:ex=32:bd=34:cd=34:su=42:sg=46:tw=42:ow=34;42:or=40;31'
-export LISTMAX CLICOLOR LSCOLORS LS_COLORS
-export ZLS_COLORS=$LS_COLORS
-
 
 # Npm modules
 if [[ -s /usr/local/lib/node_modules ]]; then
