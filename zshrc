@@ -88,8 +88,7 @@ zstyle ':completion:*:corrections' format $YELLOW'%B%d '$RED'(errors: %e)%b'$DEF
 zstyle ':completion:*:options' description 'yes'
 
 
-PROMPT="
-%{%F{green}%}[%*]%{$reset_color%} ➤ "
+PROMPT="%F{blue}[%*] %F{green}➤ %F{default}"
 
 autoload -Uz vcs_info
 
