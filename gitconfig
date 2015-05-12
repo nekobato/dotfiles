@@ -26,8 +26,6 @@
 	l = log
   today = log --reverse --no-merges --branches=* --date=local --since=midnight --pretty=format:"%s"
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
-[push]
-	default = simple
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
