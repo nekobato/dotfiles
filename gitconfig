@@ -1,9 +1,11 @@
+[include]
+  path = ~/.gitconfig.user
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = false
 [core]
 	editor = vim
-#	pager = lv -c
+	pager = lv -c
 [color]
 	ui = auto
 [alias]
@@ -29,5 +31,3 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
-[url "git@github.com:"]
-	pushinsteadof = https://github.com/
