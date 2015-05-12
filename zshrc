@@ -33,9 +33,8 @@ LS_COLORS='di=34:ln=35:so=32:pi=33:ex=32:bd=34:cd=34:su=42:sg=46:tw=42:ow=34;42:
 export LISTMAX CLICOLOR LSCOLORS LS_COLORS
 export ZLS_COLORS=$LS_COLORS
 
-
-
-
+alias ls="ls -GF"
+alias gls="gls --color"
 
 limit coredumpsize 102400
 
@@ -86,9 +85,10 @@ zstyle ':completion:*:warnings' format $RED'No matches for:'$YELLOW' %d'$DEFAULT
 zstyle ':completion:*:descriptions' format $YELLOW'completing %B%d%b'$DEFAULT
 zstyle ':completion:*:corrections' format $YELLOW'%B%d '$RED'(errors: %e)%b'$DEFAULT
 zstyle ':completion:*:options' description 'yes'
+# ls colors
+zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
-
-PROMPT="%F{blue}[%*] %F{green}➤ %F{default}"
+PROMPT="%F{blue}[%*] %F{red}✝%m✝ %F{green}➤ %F{default}"
 
 autoload -Uz vcs_info
 

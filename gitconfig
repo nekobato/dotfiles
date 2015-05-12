@@ -6,7 +6,7 @@
 	autocrlf = false
 [core]
 	editor = vim
-	pager = lv -c
+#	pager = lv -c
 [color]
 	ui = auto
 [alias]

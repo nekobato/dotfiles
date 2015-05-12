@@ -23,6 +23,12 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/Cellar:$PATH"
 export PATH="$HOME/bin:$PATH"
 
+# My server commands(Nsh)
+NSH_PATH=~/nsh
+if [ -e $NSH_PATH ];
+  then export PATH="$NSH_PATH:$PATH"
+fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
