@@ -144,6 +144,9 @@ set wildchar=<tab>
 set wildmenu
 set wildmode=list:full
 
+" no beep
+set visualbell t_vb=
+set noerrorbells
 
 filetype plugin indent on
 
