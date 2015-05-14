@@ -37,7 +37,7 @@ augroup END
 
 
 " Mouse
-set mouse-=a
+set mouse=a
 set ttymouse=xterm2
 
 
