@@ -110,6 +110,7 @@ autocmd FileType quickrun AnsiEsc
 NeoBundle 'AnsiEsc.vim'
 NeoBundle 'banyan/recognize_charcode.vim'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'grep.vim'
 
 " Syntax
 NeoBundle 'scrooloose/syntastic'
