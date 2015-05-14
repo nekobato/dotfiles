@@ -3,40 +3,6 @@ if filereadable("/etc/vim/vimrc")
 endif
 
 
-set nocompatible
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" add plugins
-
-" Program
-NeoBundle 'thinca/vim-quickrun'
-autocmd FileType quickrun AnsiEsc
-
-" Utility
-NeoBundle 'AnsiEsc.vim'
-NeoBundle 'banyan/recognize_charcode.vim'
-NeoBundle 'airblade/vim-gitgutter'
-" Syntax
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'sheerun/vim-polyglot'
-
-
-NeoBundle 'scrooloose/nerdtree'
-" 起動時にオン
-autocmd vimenter * NERDTree
-autocmd VimEnter * wincmd p
-" 表示がNerdTreeのみだったら自動でclose
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-" NerdTree Size
-let g:NERDTreeWinSize=20
-
 "
 " Coloring
 "
@@ -51,18 +17,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
-
-NeoBundle 'https://github.com/nathanaelkane/vim-indent-guides.git'
-" 起動時にオン
-let g:indent_guides_enable_on_vim_startup = 1
-" ガイドの開始位置
-let g:indent_guides_start_level = 1
-" ガイドの表示幅
-let g:indent_guides_guide_size = 1
-" ガイドの色設定
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=black
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=gray ctermbg=gray
 
 
 " 不可視文字の可視化
@@ -81,21 +35,6 @@ augroup InvisibleIndicator
   autocmd BufEnter * call ActivateInvisibleIndicator()
 augroup END
 
-
-NeoBundle 'Shougo/neocomplcache'
-" 補完ウィンドウの設定
-set completeopt=menuone
-" 起動時に有効化
-let g:neocomplcache_enable_at_startup = 1
-" 大文字が入力されるまで大文字小文字の区別を無視する
-let g:neocomplcache_enable_smart_case = 1
-" _(アンダースコア)区切りの補完を有効化
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_enable_camel_case_completion  =  1
-" ポップアップメニューで表示される候補の数
-let g:neocomplcache_max_list = 20
-" シンタックスをキャッシュするときの最小文字長
-let g:neocomplcache_min_syntax_length = 3
 
 " Mouse
 set mouse-=a
@@ -148,6 +87,73 @@ set wildmode=list:full
 set visualbell t_vb=
 set noerrorbells
 
-filetype plugin indent on
 
+"
+" neobundle initilize
+"
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" add plugins
+
+" Program
+NeoBundle 'thinca/vim-quickrun'
+autocmd FileType quickrun AnsiEsc
+
+" Utility
+NeoBundle 'AnsiEsc.vim'
+NeoBundle 'banyan/recognize_charcode.vim'
+NeoBundle 'airblade/vim-gitgutter'
+
+" Syntax
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sheerun/vim-polyglot'
+
+" Tree
+NeoBundle 'scrooloose/nerdtree'
+" 起動時にオン
+autocmd vimenter * NERDTree
+autocmd VimEnter * wincmd p
+" 表示がNerdTreeのみだったら自動でclose
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" NerdTree Size
+let g:NERDTreeWinSize=20
+
+NeoBundle 'https://github.com/nathanaelkane/vim-indent-guides.git'
+" 起動時にオン
+let g:indent_guides_enable_on_vim_startup = 1
+" ガイドの開始位置
+let g:indent_guides_start_level = 1
+" ガイドの表示幅
+let g:indent_guides_guide_size = 1
+" ガイドの色設定
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=gray ctermbg=gray
+
+NeoBundle 'Shougo/neocomplcache'
+" 補完ウィンドウの設定
+set completeopt=menuone
+" 起動時に有効化
+let g:neocomplcache_enable_at_startup = 1
+" 大文字が入力されるまで大文字小文字の区別を無視する
+let g:neocomplcache_enable_smart_case = 1
+" _(アンダースコア)区切りの補完を有効化
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_enable_camel_case_completion  =  1
+" ポップアップメニューで表示される候補の数
+let g:neocomplcache_max_list = 20
+" シンタックスをキャッシュするときの最小文字長
+let g:neocomplcache_min_syntax_length = 3
+
+" neobundle end
+call neobundle#end()
+filetype plugin indent on
 NeoBundleCheck
+
