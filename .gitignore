@@ -1,5 +1,5 @@
 .DS_*
-vim/bundle/*
-vim/bundle/.neobundle/
-!vim/bundle/keep
 vim/.netrwhist
+
+vim/bundle/*
+!vim/bundle/neobundle.vim
