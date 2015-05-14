@@ -248,3 +248,8 @@ if [ $UID = 0 ]; then
   unset HISTFILE
   SAVEHIST=0
 fi
+
+if [ -e ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
