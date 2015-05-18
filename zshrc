@@ -35,6 +35,7 @@ export ZLS_COLORS=$LS_COLORS
 
 alias ls="ls -GF"
 alias gls="gls --color"
+alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 limit coredumpsize 102400
 
