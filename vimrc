@@ -153,6 +153,8 @@ let g:neocomplcache_max_list = 20
 " シンタックスをキャッシュするときの最小文字長
 let g:neocomplcache_min_syntax_length = 3
 
+NeoBundle 'terryma/vim-multiple-cursors'
+
 " neobundle end
 call neobundle#end()
 filetype plugin indent on
