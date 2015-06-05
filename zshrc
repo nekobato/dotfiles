@@ -205,6 +205,10 @@ function +vi-git-stash-count() {
     fi
 }
 
+# git 補完
+if [ -e ~/.git-completion.bash ]; then
+  source ~/.git-completion.bash
+fi
 
 function _update_vcs_info_msg() {
     local -a messages
@@ -253,4 +257,3 @@ fi
 if [ -e ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
-
