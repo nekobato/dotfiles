@@ -1,7 +1,7 @@
 [include]
   path = ~/.gitconfig.user
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/koriyama/.gitignore_global
 	autocrlf = false
 [core]
 	editor = vim
@@ -25,9 +25,18 @@
 	lg = log --graph --all --color --oneline
 	l = log
   today = log --reverse --no-merges --branches=* --date=local --since=midnight --pretty=format:"%s"
-	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  pullu = !git branch | grep '*' | sed -e 's/* //g' | xargs git pull origin
+  pushu = !git branch | grep '*' | sed -e 's/* //g' | xargs git push origin
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [push]
 	default = upstream
+[user]
+	email = nekobato@gmail.com
+	name = nekobato
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

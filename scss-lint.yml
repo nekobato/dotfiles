@@ -1,0 +1,24 @@
+linters:
+  Comment:
+    enabled: true
+
+  LeadingZero:
+    enabled: false
+
+  MergeableSelector:
+    force_nesting: false
+
+  PlaceholderInExtend:
+    enabled: false
+
+  PropertySortOrder:
+    enabled: false
+
+  SelectorDepth:
+    enabled: true
+
+  Shorthand:
+    enabled: false
+
+  StringQuotes:
+    style: single_quotes
