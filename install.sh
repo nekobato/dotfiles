@@ -1,7 +1,5 @@
 /bin/sh
 
-cd 
-
 cd ~
 
 ln -s ~/dotfiles/zshrc .zshrc
