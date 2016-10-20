@@ -1,7 +1,7 @@
 [include]
   path = ~/.gitconfig.user
 [core]
-	excludesfile = /Users/koriyama/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	autocrlf = false
 [core]
 	editor = vim
@@ -26,7 +26,7 @@
 	l = log
   today = log --reverse --no-merges --branches=* --date=local --since=midnight --pretty=format:"%s"
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
-  pullu = !git branch | grep '*' | sed -e 's/* //g' | xargs git pull origin
+  pullu = !git branch | grep '*' | sed -e 's/* //g' | xargs git pull --rebase origin
   pushu = !git branch | grep '*' | sed -e 's/* //g' | xargs git push origin
 [filter "media"]
 	clean = git-media-clean %f

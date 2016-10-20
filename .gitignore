@@ -3,3 +3,5 @@ vim/.netrwhist
 
 vim/bundle/*
 !vim/bundle/neobundle.vim
+
+npm-debug.log
