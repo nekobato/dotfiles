@@ -22,7 +22,7 @@ set autoindent
 " 不可視文字の可視化
 set list
 set lcs=tab:>\s,trail:_,extends:\
-highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
+" highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 function! ActivateInvisibleIndicator()
@@ -119,7 +119,7 @@ NeoBundle 'sheerun/vim-polyglot'
 " Tree
 NeoBundle 'scrooloose/nerdtree'
 " 起動時にオン
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 autocmd VimEnter * wincmd p
 " 表示がNerdTreeのみだったら自動でclose
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -159,4 +159,3 @@ NeoBundle 'terryma/vim-multiple-cursors'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
-

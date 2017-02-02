@@ -1,12 +1,12 @@
 linters:
   Comment:
-    enabled: true
+    enabled: false
 
   LeadingZero:
     enabled: false
 
   MergeableSelector:
-    force_nesting: false
+    force_nesting: true
 
   PlaceholderInExtend:
     enabled: false
@@ -15,10 +15,16 @@ linters:
     enabled: false
 
   SelectorDepth:
-    enabled: true
+    enabled: false
 
   Shorthand:
-    enabled: false
+    enabled: true
 
   StringQuotes:
     style: single_quotes
+
+  PseudoElement:
+    enabled: false
+
+  NestingDepth:
+    max_depth: 4
