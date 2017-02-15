@@ -22,7 +22,7 @@ set autoindent
 " 不可視文字の可視化
 set list
 set lcs=tab:>\s,trail:_,extends:\
-" highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
+highlight SpecialKey cterm=NONE ctermfg=7 guifg=skyblue2
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 function! ActivateInvisibleIndicator()
@@ -55,6 +55,7 @@ set noswapfile
 set ambiwidth=double
 set autoread
 set autowrite
+set backspace=indent,eol,start
 set complete+=k
 set cursorline
 set hidden

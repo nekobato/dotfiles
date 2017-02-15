@@ -36,6 +36,7 @@ export ZLS_COLORS=$LS_COLORS
 alias ls="ls -GF"
 alias gls="gls --color"
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias videomin='(){ ffmpeg -i "$1" -f mp4 -vcodec libx264 -vb 512k "$2" }'
 
 limit coredumpsize 102400
 
