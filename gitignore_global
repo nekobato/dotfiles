@@ -4,3 +4,6 @@ Thumbs.db
 node_modules
 npm-debug.log
 
+coffeelint.json
+.sass-lint.yml
+.scss-lint.yml
