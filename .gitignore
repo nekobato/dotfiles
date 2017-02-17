@@ -1,7 +1,5 @@
 .DS_*
-vim/.netrwhist
-
-vim/bundle/*
-!vim/bundle/neobundle.vim
+vim/
+!vim/dein.sh
 
 npm-debug.log

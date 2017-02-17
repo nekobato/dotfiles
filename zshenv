@@ -61,3 +61,7 @@ PATH=~/.plenv/shims:$PATH
 
 # Android
 export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.0.2
+
+# Anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
