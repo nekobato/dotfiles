@@ -1,5 +1,5 @@
 .DS_*
-vim/
-!vim/dein.sh
+
+vim/dein/
 
 npm-debug.log
