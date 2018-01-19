@@ -29,9 +29,10 @@ if [ ! -e ~/.zprofile ]; then
   ln -s ~/dotfiles/zsh/zprofile ~/.zprofile
 fi
 
-if [ ! -e "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_nekobato_setup" ]; then
-  ln -s ~/dotfiles/zsh/prompt_nekobato_setup "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_nekobato_setup"
+if [ -e "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_nekobato_setup" ]; then
+  rm -f "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_nekobato_setup"
 fi
+ln -s ~/dotfiles/zsh/prompt_nekobato_setup "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_nekobato_setup"
 
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do

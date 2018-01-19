@@ -3,3 +3,6 @@ Thumbs.db
 .ftpconfig
 node_modules
 npm-debug.log
+Sandbox
+Sandbox.*
+.vscode

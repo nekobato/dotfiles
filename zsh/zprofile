@@ -43,6 +43,13 @@ typeset -gU cdpath fpath mailpath path
 
 export NODE_PATH=/usr/local/lib/node_modules
 
+#
+# Aliases
+#
+if [[ "$OSTYPE" == darwin* ]]; then
+  alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+fi
+
 # Anyenv
 if [[ -d "$HOME/.anyenv/" ]]; then
   export PATH="$HOME/.anyenv/bin:$PATH"
