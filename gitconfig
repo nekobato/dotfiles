@@ -18,6 +18,7 @@
 	cmv = commit -v
 	cma = commit -a -v
 	co = checkout
+	fo = fetch origin
 	cl = clone
 	dc = diff --cached
 	d = diff -C

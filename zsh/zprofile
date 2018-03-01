@@ -41,7 +41,14 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
-export NODE_PATH=/usr/local/lib/node_modules
+# Set the list of directories that Zsh searches for programs.
+path=(
+  /usr/local/{bin,sbin}
+  /usr/local/Cellar
+  $HOME/bin
+  $NODE_PATH
+  $path
+)
 
 #
 # Aliases
@@ -56,14 +63,9 @@ if [[ -d "$HOME/.anyenv/" ]]; then
   eval "$(anyenv init -)"
 fi
 
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  /usr/local/Cellar
-  $HOME/bin
-  $NODE_PATH
-  $path
-)
+# ndenv
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
 
 #
 # Less
