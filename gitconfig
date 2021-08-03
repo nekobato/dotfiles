@@ -25,6 +25,7 @@
 	ds = diff -C --stat
 	lg = log --graph --all --color --oneline
 	l = log
+  in = install --no-save
   today = log --reverse --no-merges --branches=* --date=local --since=midnight --pretty=format:"%s"
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
   pullu = !git branch | grep '*' | sed -e 's/* //g' | xargs git pull --rebase origin
