@@ -1,24 +1,19 @@
 #
 # Setup Zsh enviroments
 #
-if [ ! -e ~/.zprezto ]; then
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-fi
+
 
 if [ ! -e ~/.zshrc ]; then
-  ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+  ln -s ~/my/nekobato/dotfiles/zsh/zshrc ~/.zshrc
 fi
 
 if [ ! -e ~/.zshrc.local ]; then
   touch ~/.zshrc.local
 fi
 
-if [ ! -e ~/.zpreztorc ]; then
-  ln -s ~/dotfiles/zsh/zpreztorc ~/.zpreztorc
-fi
 
 if [ ! -e ~/.zshenv ]; then
-  ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
+  ln -s ~/my/nekobato/dotfiles/zsh/zshenv ~/.zshenv
 fi
 
 if [ ! -e ~/.zshenv.local ]; then
@@ -26,37 +21,23 @@ if [ ! -e ~/.zshenv.local ]; then
 fi
 
 if [ ! -e ~/.zprofile ]; then
-  ln -s ~/dotfiles/zsh/zprofile ~/.zprofile
+  ln -s ~/my/nekobato/dotfiles/zsh/zprofile ~/.zprofile
 fi
-
-if [ -e "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_nekobato_setup" ]; then
-  rm -f "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_nekobato_setup"
-fi
-ln -s ~/dotfiles/zsh/prompt_nekobato_setup "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_nekobato_setup"
-
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
 
 if [ ! -e ~/.tmux.conf ]; then
-  ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+  ln -s ~/my/nekobato/dotfiles/tmux.conf ~/.tmux.conf
 fi
 
 if [ ! -e ~/.vim ]; then
-  ln -s ~/dotfiles/vim ~/.vim
+  ln -s ~/my/nekobato/dotfiles/vim ~/.vim
 fi
 
 if [ ! -e ~/.vimrc ]; then
-  ln -s ~/dotfiles/vimrc ~/.vimrc
-fi
-
-if [ ! -e ~/.atom ]; then
-  ln -s ~/dotfiles/atom ~/.atom
+  ln -s ~/my/nekobato/dotfiles/vimrc ~/.vimrc
 fi
 
 if [ ! -e ~/.gitconfig ]; then
-  ln -s ~/dotfiles/gitconfig ~/.gitconfig
+  ln -s ~/my/nekobato/dotfiles/gitconfig ~/.gitconfig
 fi
 
 if [ ! -e ~/.gitconfig.user ]; then
@@ -64,12 +45,8 @@ if [ ! -e ~/.gitconfig.user ]; then
 fi
 
 if [ ! -e ~/.gitignore_global ]; then
-  ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
+  ln -s ~/my/nekobato/dotfiles/gitignore_global ~/.gitignore_global
 fi
 
-# install dein.vim
-if [ ! -e ~/dotfiles/vim/dein ]; then
-  sh ./vim/dein.sh ~/dotfiles/vim/dein
-fi
 
 echo 'finished dotfiles setup.'
