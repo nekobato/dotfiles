@@ -31,13 +31,14 @@
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
   pullu = !git branch | grep '*' | sed -e 's/* //g' | xargs git pull --rebase origin
   pushu = !git branch | grep '*' | sed -e 's/* //g' | xargs git push origin
-	pl = pull
-	ps = push
+	pl = pullu
+	ps = pushu
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [pull]
 	rebase = true
+	default = origin
 [push]
 	default = tracking
 [branch]
