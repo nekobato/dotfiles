@@ -50,22 +50,11 @@ path=(
   $path
 )
 
-#
-# Aliases
-#
-if [[ "$OSTYPE" == darwin* ]]; then
-  alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-fi
-
 # Anyenv
 if [[ -d "$HOME/.anyenv/" ]]; then
   export PATH="$HOME/.anyenv/bin:$PATH"
   eval "$(anyenv init -)"
 fi
-
-# ndenv
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
 
 #
 # Less

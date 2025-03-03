@@ -181,9 +181,9 @@ __git_zsh_main ()
 	case $state in
 	(command)
 		_alternative \
-                         'alias-commands:alias:__git_zsh_cmd_alias' \
-                         'common-commands:common:__git_zsh_cmd_common' \
-                         'all-commands:all:__git_zsh_cmd_all' && _ret=0
+			'alias-commands:alias:__git_zsh_cmd_alias' \
+			'common-commands:common:__git_zsh_cmd_common' \
+			'all-commands:all:__git_zsh_cmd_all' && _ret=0
 		;;
 	(arg)
 		local command="${words[1]}" __git_dir

@@ -3,16 +3,16 @@
 #
 
 
-if [ ! -e ~/.gitconfig ]; then
-  ln -s ~/my/nekobato/dotfiles/gitconfig ~/.gitconfig
+if [ ! -e ./.gitconfig ]; then
+  ln -s ./gitconfig ~/.gitconfig
 fi
 
-if [ ! -e ~/.gitconfig.user ]; then
+if [ ! -e ./.gitconfig.user ]; then
   touch ~/.gitconfig.user
 fi
 
-if [ ! -e ~/.gitignore_global ]; then
-  ln -s ~/my/nekobato/dotfiles/gitignore_global ~/.gitignore_global
+if [ ! -e ./.gitignore_global ]; then
+  ln -s ./gitignore_global ~/.gitignore_global
 fi
 
 
