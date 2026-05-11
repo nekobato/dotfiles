@@ -1,3 +1,0 @@
-[submodule "direnv"]
-	path = direnv
-	url = https://github.com/direnv/direnv

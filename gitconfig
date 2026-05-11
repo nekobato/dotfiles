@@ -1,3 +1,6 @@
+[user]
+	name = nekobato
+	email = nekobato@gmail.com
 [include]
   path = ~/.gitconfig.user
 [core]
